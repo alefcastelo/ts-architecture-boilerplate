@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    browser: true,
+    node: true,
     es2021: true
   },
   extends: ['standard', 'plugin:@typescript-eslint/recommended'],
@@ -10,5 +10,9 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['@typescript-eslint', 'prettier'],
-  rules: {}
+  rules: {
+    'space-before-function-paren': 'off',
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': ['error']
+  }
 }

@@ -1,8 +1,23 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "isolatedModules": true,
+    "types": [
+      "reflect-metadata"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+
+    "lib": [
+      "es2017"
+  ]
   },
   "include": [
     "src/**/*"

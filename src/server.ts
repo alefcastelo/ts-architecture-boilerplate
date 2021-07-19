@@ -1,13 +1,7 @@
-import express from 'express';
-import routes from './routes';
-import dotenv from 'dotenv';
+import { App } from './app'
 
-dotenv.config({ path: './.env' });
+const app = new App({
+  envFile: './.env'
+})
 
-const app = express();
-
-app.use(routes);
-
-app.listen(process.env.HOST_PORT, () => {
-  console.log(`Server running: http://localhost:${process.env.HOST_PORT}`);
-});
+app.run()
