@@ -1,0 +1,1 @@
+# TS Architecture Boilerplate
