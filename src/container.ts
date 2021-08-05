@@ -1,12 +1,6 @@
 import 'reflect-metadata'
-import { container } from 'tsyringe'
+import { Container } from 'inversify'
 
-export class Container {
-  get(id: string): unknown {
-    return container.resolve(id)
-  }
+const container = new Container({ autoBindInjectable: true })
 
-  set(id: string, instance: unknown): void {
-    container.registerInstance(id, instance)
-  }
-}
+export { container }

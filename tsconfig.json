@@ -1,27 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "module": "commonjs",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "isolatedModules": true,
-    "types": [
-      "reflect-metadata"
-    ],
+    "allowSyntheticDefaultImports": true,
+    "types": ["reflect-metadata"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-
-    "lib": [
-      "es2017"
-  ]
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "src/**/*"
-  ],
+, "server.ts"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,5 +1,5 @@
-import { Subscriber } from './entity/subscriber'
-import { SubscriberListFiltersInput } from './input/subscriber-list-filters.input'
+import { Subscriber } from '@/subscriber/entity/subscriber'
+import { SubscriberListFiltersInput } from '@/subscriber/input/subscriberListFilters.input'
 
 export interface SubscriberRepositoryInterface {
   findById(id: number): Promise<Subscriber>
