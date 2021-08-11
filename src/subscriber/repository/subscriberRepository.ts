@@ -1,8 +1,8 @@
 import { injectable } from 'inversify'
 import { EntityManager, Repository } from 'typeorm'
-import { Subscriber } from '../entity/subscriber'
-import { SubscriberListFiltersInput } from '../input/subscriberListFiltersInput'
-import { SubscriberRepositoryInterface } from '../subscriberRepositoryInterface'
+import { Subscriber } from '@/subscriber/entity/subscriber'
+import { SubscriberListFiltersInput } from '@/subscriber/input/subscriberListFiltersInput'
+import { SubscriberRepositoryInterface } from '@/subscriber/subscriberRepositoryInterface'
 
 @injectable()
 export class SubscriberRepository implements SubscriberRepositoryInterface {

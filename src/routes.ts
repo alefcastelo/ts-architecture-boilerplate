@@ -1,7 +1,7 @@
-import { Request, Response, Router } from 'express'
 import { container } from '@/container'
+import { Request, Response, Router } from 'express'
 import { HealthCheckAction } from '@/rest/action/healthcheckAction'
-import { SubscriberCreateAction } from './rest/action/subscriber/subscriberCreateAction'
+import { SubscriberCreateAction } from '@/rest/action/subscriber/subscriberCreateAction'
 
 export const createRoutes = (): Router => {
   const routes = Router()

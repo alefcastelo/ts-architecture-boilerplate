@@ -3,7 +3,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 @Entity()
 export class Subscriber {
   @PrimaryGeneratedColumn()
-  protected id: string
+  protected id: number
 
   @Column()
   protected firstName: string
@@ -24,7 +24,7 @@ export class Subscriber {
     this.email = email
   }
 
-  public getId(): string {
+  public getId(): number {
     return this.id
   }
 

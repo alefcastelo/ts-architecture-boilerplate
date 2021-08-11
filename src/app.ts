@@ -1,7 +1,7 @@
-import express, { Express } from 'express'
 import dotenv from 'dotenv'
-import { createRoutes } from './routes'
-import { createDatabaseConnection } from './database'
+import express, { Express } from 'express'
+import { createRoutes } from '@/routes'
+import { createDatabaseConnection } from '@/database'
 
 type AppConfig = {
   envFile: string
