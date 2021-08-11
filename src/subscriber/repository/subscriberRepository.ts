@@ -1,8 +1,8 @@
 import { injectable } from 'inversify'
 import { EntityManager, Repository } from 'typeorm'
 import { Subscriber } from '../entity/subscriber'
-import { SubscriberListFiltersInput } from '../input/subscriberListFilters.input'
-import { SubscriberRepositoryInterface } from '../subscriberRepository.interface'
+import { SubscriberListFiltersInput } from '../input/subscriberListFiltersInput'
+import { SubscriberRepositoryInterface } from '../subscriberRepositoryInterface'
 
 @injectable()
 export class SubscriberRepository implements SubscriberRepositoryInterface {
@@ -12,8 +12,8 @@ export class SubscriberRepository implements SubscriberRepositoryInterface {
     this.repository = entityManager.getRepository<Subscriber>(Subscriber)
   }
 
-  async findById(id: number): Promise<Subscriber> {
-    return this.repository.findOne({ id })
+  async findById(id: string): Promise<Subscriber> {
+    return this.repository.findOne(id)
   }
 
   async create(subscriber: Subscriber): Promise<Subscriber> {

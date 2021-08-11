@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'no-use-before-define': 'off',
     'space-before-function-paren': 'off',
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': ['error']
