@@ -12,8 +12,14 @@ export class SubscriberRepository implements SubscriberRepositoryInterface {
     this.repository = entityManager.getRepository<Subscriber>(Subscriber)
   }
 
-  async findById(id: string): Promise<Subscriber> {
-    return this.repository.findOne(id)
+  async findById(id: number): Promise<Subscriber> {
+    const subscriber = await this.repository.findOne(id)
+
+    if (!subscriber) {
+      throw new Error('Subscriber not found')
+    }
+
+    return subscriber
   }
 
   async create(subscriber: Subscriber): Promise<Subscriber> {

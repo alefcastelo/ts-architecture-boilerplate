@@ -21,6 +21,12 @@ export class App {
 
     this.app.use(express.json())
     this.app.use(createRoutes())
+    this.app.use((err, req, res, next) => {
+      res.status(500).send({
+        sucesss: false,
+        message: err.message
+      })
+    })
   }
 
   public run (): void {
